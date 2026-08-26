@@ -98,4 +98,11 @@
       video.currentTime = 0;
     });
   });
+
+  document.querySelectorAll(".project--link").forEach((card) => {
+    card.addEventListener("click", (e) => {
+      const href = card.dataset.href;
+      if (href) window.location.href = href;
+    });
+  });
 })();

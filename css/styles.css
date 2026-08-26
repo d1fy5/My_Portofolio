@@ -906,6 +906,10 @@ h3 {
   transform: translateY(-4px);
 }
 
+.project--link {
+  cursor: pointer;
+}
+
 .project-preview {
   position: relative;
   display: block;
