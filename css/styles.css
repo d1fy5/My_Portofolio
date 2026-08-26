@@ -925,6 +925,35 @@ h3 {
   line-height: 1;
   color: rgba(232, 241, 255, 0.08);
   pointer-events: none;
+  z-index: 2;
+}
+
+.project-preview--video {
+  cursor: pointer;
+}
+
+.project-video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.project-preview--video .art {
+  opacity: 0;
+  height: 0;
+  overflow: hidden;
+  transition: opacity 0.2s ease;
+}
+
+.project-preview--video:hover .project-video,
+.project-preview--video.is-playing .project-video {
+  opacity: 1;
 }
 
 .art {
