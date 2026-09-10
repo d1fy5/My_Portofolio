@@ -720,32 +720,6 @@ h3 {
   background: var(--accent);
 }
 
-.hero-cue {
-  position: absolute;
-  left: 50%;
-  bottom: 1.6rem;
-  width: 1px;
-  height: 44px;
-  background: var(--border-strong);
-  overflow: hidden;
-  transform: translateX(-50%);
-}
-
-.hero-cue::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: -40%;
-  width: 100%;
-  height: 40%;
-  background: var(--accent);
-  animation: cue 2.4s cubic-bezier(0.6, 0, 0.4, 1) infinite;
-}
-
-@keyframes cue {
-  to { top: 100%; }
-}
-
 .about-grid {
   display: grid;
   grid-template-columns: 1fr 1.15fr;
@@ -1535,10 +1509,6 @@ h3 {
     max-width: 540px;
     margin-inline: auto;
     width: 100%;
-  }
-
-  .hero-cue {
-    display: none;
   }
 
   .about-grid {
