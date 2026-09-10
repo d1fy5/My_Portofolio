@@ -54,16 +54,16 @@
     return (
       "<svg xmlns='http://www.w3.org/2000/svg' width='" + w + "' height='" + h + "' viewBox='0 0 " + w + " " + h + "'>" +
       "<defs><linearGradient id='g' x1='0' y1='0' x2='1' y2='1'>" +
-      "<stop offset='0' stop-color='hsl(" + hue + ",45%,20%)'/>" +
-      "<stop offset='1' stop-color='hsl(" + (hue + 30) + ",45%,12%)'/>" +
+      "<stop offset='0' stop-color='hsl(" + hue + ",28%,98%)'/>" +
+      "<stop offset='1' stop-color='hsl(" + (hue + 30) + ",28%,92%)'/>" +
       "</linearGradient></defs>" +
       "<rect width='" + w + "' height='" + h + "' fill='url(#g)'/>" +
-      "<rect x='40' y='60' width='" + (w - 80) + "' height='" + (h - 120) + "' rx='14' fill='rgba(7,17,31,0.55)' stroke='rgba(232,241,255,0.18)'/>" +
-      "<circle cx='" + (w / 2) + "' cy='160' r='34' fill='none' stroke='rgba(59,130,246,0.55)' stroke-width='5'/>" +
-      "<rect x='" + (w / 2 - 34) + "' y='146' width='68' height='10' rx='5' fill='#3b82f6' transform='rotate(-45 " + (w / 2) + " 151)'/>" +
-      "<rect x='" + (w / 2 - 150) + "' y='260' width='300' height='14' rx='7' fill='rgba(232,241,255,0.65)'/>" +
-      "<rect x='" + (w / 2 - 110) + "' y='290' width='220' height='9' rx='4.5' fill='rgba(232,241,255,0.32)'/>" +
-      "<text x='" + (w / 2) + "' y='" + (h - 70) + "' text-anchor='middle' font-family='Georgia, serif' font-style='italic' font-size='20' fill='rgba(232,241,255,0.45)'>Certificate of Completion</text>" +
+      "<rect x='40' y='60' width='" + (w - 80) + "' height='" + (h - 120) + "' rx='14' fill='rgba(255,255,255,0.85)' stroke='rgba(15,23,42,0.1)'/>" +
+      "<circle cx='" + (w / 2) + "' cy='160' r='34' fill='none' stroke='rgba(37,99,235,0.45)' stroke-width='5'/>" +
+      "<rect x='" + (w / 2 - 34) + "' y='146' width='68' height='10' rx='5' fill='#2563eb' transform='rotate(-45 " + (w / 2) + " 151)'/>" +
+      "<rect x='" + (w / 2 - 150) + "' y='260' width='300' height='14' rx='7' fill='rgba(17,24,39,0.75)'/>" +
+      "<rect x='" + (w / 2 - 110) + "' y='290' width='220' height='9' rx='4.5' fill='rgba(100,116,139,0.45)'/>" +
+      "<text x='" + (w / 2) + "' y='" + (h - 70) + "' text-anchor='middle' font-family='Georgia, serif' font-style='italic' font-size='20' fill='rgba(100,116,139,0.7)'>Certificate of Completion</text>" +
       "</svg>"
     );
   };

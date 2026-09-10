@@ -16,16 +16,17 @@
   position: sticky;
   top: 0;
   z-index: 100;
-  background: rgba(7, 17, 31, 0.85);
+  background: rgba(255, 255, 255, 0.85);
   -webkit-backdrop-filter: blur(12px);
   backdrop-filter: blur(12px);
-  border-bottom: 1px solid var(--border);
+  border-bottom: 1px solid var(--border-color);
   transition: background 0.3s ease, border-color 0.3s ease;
 }
 
 .cert-header.is-scrolled {
-  background: rgba(11, 22, 40, 0.82);
-  border-bottom-color: var(--border-strong);
+  background: rgba(255, 255, 255, 0.92);
+  border-bottom-color: var(--border-color);
+  box-shadow: 0 1px 12px rgba(15, 23, 42, 0.05);
 }
 
 .cert-header-inner {
@@ -224,7 +225,7 @@
 .cert-card:hover {
   border-color: var(--border-strong);
   transform: translateY(-4px);
-  box-shadow: 0 20px 45px -24px rgba(0, 0, 0, 0.6);
+  box-shadow: 0 20px 45px -24px rgba(15, 23, 42, 0.18);
 }
 
 .cert-preview {
@@ -393,7 +394,7 @@
   align-items: center;
   justify-content: center;
   padding: clamp(0.75rem, 3vw, 2rem);
-  background: rgba(4, 10, 18, 0.82);
+  background: rgba(15, 23, 42, 0.5);
   -webkit-backdrop-filter: blur(8px);
   backdrop-filter: blur(8px);
   opacity: 0;
@@ -447,7 +448,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background: rgba(7, 17, 31, 0.72);
+  background: rgba(15, 23, 42, 0.6);
   border: 1px solid var(--border-strong);
   border-radius: 10px;
   color: var(--text);
