@@ -95,19 +95,9 @@
   padding-block: 0 clamp(2rem, 5vh, 3.5rem);
 }
 
-.pd-featured {
-  display: flex;
-  justify-content: center;
-  padding: clamp(1rem, 3vw, 2.5rem);
-  background: var(--bg-secondary);
-  border: 1px solid var(--border);
-  border-radius: calc(var(--radius) + 4px);
-}
-
 .pd-video-wrapper--mockup {
-  width: min(720px, 100%);
-  border-radius: calc(var(--radius) + 4px);
-  overflow: hidden;
+  width: 100%;
+  border-radius: var(--radius);
   border: 1px solid var(--border-strong);
   background: var(--bg-elev);
   box-shadow: var(--shadow-lift);
