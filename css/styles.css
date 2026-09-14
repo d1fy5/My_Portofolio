@@ -879,6 +879,15 @@ h3 {
   transition: color 0.25s ease;
 }
 
+.skill-level {
+  margin-left: 0.5rem;
+  font-family: var(--font-mono);
+  font-size: 0.66rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
 .skill-item:hover .skill-name {
   color: var(--accent);
 }
