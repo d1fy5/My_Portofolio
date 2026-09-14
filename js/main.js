@@ -72,6 +72,46 @@
   );
   sections.forEach((section) => sectionObserver.observe(section));
 
+  const easeInOutCubic = (t) =>
+    t < 0.5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2;
+
+  const scrollToSection = (hash) => {
+    const target = document.querySelector(hash);
+    if (!target) return false;
+    const targetY =
+      target.getBoundingClientRect().top +
+      window.scrollY -
+      (document.querySelector(".site-header")?.offsetHeight || 0) -
+      16;
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+      window.scrollTo(0, targetY);
+      return true;
+    }
+    const html = document.documentElement;
+    const prevBehavior = html.style.scrollBehavior;
+    html.style.scrollBehavior = "auto";
+    const startY = window.scrollY;
+    const diff = targetY - startY;
+    const duration = 650;
+    const start = performance.now();
+    const step = (now) => {
+      const p = Math.min((now - start) / duration, 1);
+      window.scrollTo(0, startY + diff * easeInOutCubic(p));
+      if (p < 1) requestAnimationFrame(step);
+      else html.style.scrollBehavior = prevBehavior;
+    };
+    requestAnimationFrame(step);
+    return true;
+  };
+
+  document.querySelectorAll('a[href^="#"]').forEach((link) => {
+    link.addEventListener("click", (e) => {
+      const hash = link.getAttribute("href");
+      if (hash.length < 2) return;
+      if (scrollToSection(hash)) e.preventDefault();
+    });
+  });
+
   document.querySelectorAll(".project-preview--video").forEach((preview) => {
     const video = preview.querySelector(".project-video");
     if (!video) return;
