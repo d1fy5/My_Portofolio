@@ -407,6 +407,11 @@
   background: var(--bg-primary);
 }
 
+.pd-screens-grid--crop .pd-screen-img {
+  aspect-ratio: 1440 / 1103;
+  object-fit: cover;
+}
+
 /* Prototype CTA */
 
 .pd-prototype-cta {
