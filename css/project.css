@@ -64,6 +64,63 @@
   padding-block: clamp(3rem, 8vh, 5.5rem) clamp(2.5rem, 6vh, 4rem);
 }
 
+.pd-hero--compact {
+  padding-block: clamp(2rem, 5vh, 3.25rem) clamp(1.5rem, 4vh, 2.5rem);
+}
+
+.pd-hero--compact .pd-hero-desc {
+  margin-top: 1rem;
+}
+
+.pd-meta--inline {
+  margin-top: 1.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.pd-meta--inline .pd-meta-value {
+  font-size: 0.9rem;
+  color: var(--text-soft);
+}
+
+.pd-meta-sep {
+  color: var(--border-strong);
+}
+
+/* Featured Design */
+
+.pd-section--featured {
+  padding-block: 0 clamp(2rem, 5vh, 3.5rem);
+}
+
+.pd-featured {
+  display: flex;
+  justify-content: center;
+  padding: clamp(1.5rem, 4vw, 3rem);
+  background: var(--bg-secondary);
+  border: 1px solid var(--border);
+  border-radius: calc(var(--radius) + 4px);
+}
+
+.pd-phone {
+  width: min(320px, 100%);
+  border-radius: calc(var(--radius) + 8px);
+  overflow: hidden;
+  border: 1px solid var(--border-strong);
+  background: var(--bg-elev);
+  box-shadow: var(--shadow-lift);
+}
+
+.pd-phone-img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 430 / 932;
+  object-fit: cover;
+}
+
 .pd-hero-content {
   max-width: 640px;
 }
@@ -311,36 +368,45 @@
 }
 
 .pd-screen {
+  display: flex;
+  flex-direction: column;
   border-radius: var(--radius);
   overflow: hidden;
   border: 1px solid var(--border);
-  background: var(--bg-soft);
-  aspect-ratio: 9 / 16;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: border-color 0.3s ease, transform 0.3s ease;
+  background: var(--bg-secondary);
+  margin: 0;
+  transition: border-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .pd-screen:hover {
   border-color: var(--border-strong);
   transform: translateY(-4px);
+  box-shadow: var(--shadow-lift);
 }
 
-.pd-screen-placeholder {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 0.5rem;
-  padding: 1.5rem;
+.pd-screen-img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 430 / 932;
+  object-fit: cover;
+  background: var(--bg-soft);
+  transition: transform 0.5s ease;
+}
+
+.pd-screen:hover .pd-screen-img {
+  transform: scale(1.02);
 }
 
 .pd-screen-label {
+  padding: 0.85rem 1rem 0.9rem;
   font-family: var(--font-mono);
   font-size: 0.72rem;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  color: var(--text-muted);
+  text-align: center;
+  color: var(--text-soft);
+  border-top: 1px solid var(--border);
+  background: var(--bg-primary);
 }
 
 /* Prototype CTA */
@@ -442,6 +508,11 @@
   .pd-meta {
     flex-direction: column;
     gap: 1rem;
+  }
+
+  .pd-meta--inline {
+    flex-direction: row;
+    gap: 0.6rem;
   }
 
   .pd-footer-nav {
