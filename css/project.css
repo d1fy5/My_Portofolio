@@ -119,6 +119,12 @@
   object-fit: contain;
 }
 
+.pd-featured-img--crop {
+  aspect-ratio: 1440 / 1103;
+  object-fit: cover;
+  object-position: top center;
+}
+
 .pd-hero-content {
   max-width: 640px;
 }
@@ -410,6 +416,7 @@
 .pd-screens-grid--crop .pd-screen-img {
   aspect-ratio: 1440 / 1103;
   object-fit: cover;
+  object-position: top center;
 }
 
 /* Prototype CTA */

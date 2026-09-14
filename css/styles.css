@@ -983,6 +983,10 @@ h3 {
   transform: scale(1.035);
 }
 
+.project-thumb--top {
+  object-position: top center;
+}
+
 .art {
   position: absolute;
   inset: 0;

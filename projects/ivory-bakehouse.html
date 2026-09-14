@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ivory Bakehouse — Muhammad Daffa Alfarisi</title>
+  <meta name="description" content="Ivory Bakehouse — A warm, brand-focused website design for a bakery with a cozy menu experience.">
+  <meta name="theme-color" content="#FFFFFF">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%232563EB'/%3E%3Ctext x='16' y='23' font-family='Georgia' font-size='19' text-anchor='middle' fill='%23FFFFFF' font-style='italic'%3ED%3C/text%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,300..700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/styles.css">
+  <link rel="stylesheet" href="../css/project.css">
+</head>
+<body>
+
+  <header class="pd-header" data-header>
+    <div class="pd-header-inner">
+      <a class="pd-back" href="../index.html#projects">
+        <span class="pd-back-arrow" aria-hidden="true">←</span>
+        Back to Projects
+      </a>
+      <span class="pd-header-index">03</span>
+    </div>
+  </header>
+
+  <main>
+
+    <section class="pd-hero pd-hero--compact">
+      <div class="pd-container">
+        <div class="pd-hero-content reveal">
+          <p class="eyebrow">03 — Ivory Bakehouse</p>
+          <h1 class="pd-hero-title">Ivory Bakehouse</h1>
+          <p class="pd-hero-subtitle">Bakery Brand &amp; Website Design</p>
+          <p class="pd-hero-desc">
+            A warm, brand-focused website design for a bakery, built around a cozy home page and an inviting menu experience.
+          </p>
+          <div class="pd-meta pd-meta--inline">
+            <span class="pd-meta-value">UI/UX Designer</span>
+            <span class="pd-meta-sep" aria-hidden="true">·</span>
+            <span class="pd-meta-value">Web</span>
+            <span class="pd-meta-sep" aria-hidden="true">·</span>
+            <span class="pd-meta-value">Figma</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="pd-section pd-section--featured">
+      <div class="pd-container">
+        <div class="pd-featured-img reveal">
+          <img class="pd-featured-img--img pd-featured-img--crop" src="../assets/bakery/home-page.jpg" alt="Ivory Bakehouse homepage" loading="eager">
+        </div>
+      </div>
+    </section>
+
+    <section class="pd-section pd-section--soft">
+      <div class="pd-container">
+        <div class="pd-section-head reveal">
+          <p class="eyebrow">Web Pages</p>
+          <h2 class="pd-section-title">Key Pages</h2>
+        </div>
+        <div class="pd-screens-grid pd-screens-grid--crop">
+          <figure class="pd-screen reveal">
+            <img class="pd-screen-img" src="../assets/bakery/home-page.jpg" alt="Ivory Bakehouse Home" loading="lazy">
+            <figcaption class="pd-screen-label">Home</figcaption>
+          </figure>
+          <figure class="pd-screen reveal" style="--delay:80ms">
+            <img class="pd-screen-img" src="../assets/bakery/menu-page.jpg" alt="Ivory Bakehouse Menu" loading="lazy">
+            <figcaption class="pd-screen-label">Menu</figcaption>
+          </figure>
+          <figure class="pd-screen reveal" style="--delay:160ms">
+            <img class="pd-screen-img" src="../assets/bakery/menu-page-2.jpg" alt="Ivory Bakehouse Menu Experience" loading="lazy">
+            <figcaption class="pd-screen-label">Menu Experience</figcaption>
+          </figure>
+          <figure class="pd-screen reveal">
+            <img class="pd-screen-img" src="../assets/bakery/contact-page.jpg" alt="Ivory Bakehouse Contact" loading="lazy">
+            <figcaption class="pd-screen-label">Contact</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="pd-section pd-nav-footer">
+      <div class="pd-container">
+        <div class="pd-footer-nav">
+          <a class="pd-footer-link" href="../index.html#projects">
+            <span class="pd-footer-link-label">Back to Projects</span>
+            <span class="pd-footer-link-arrow" aria-hidden="true">←</span>
+          </a>
+          <a class="pd-footer-link pd-footer-link--next" href="nutrimate.html">
+            <span class="pd-footer-link-label">Next Project →</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-brand">
+          <p class="footer-name">Muhammad Daffa Alfarisi</p>
+          <p class="footer-role">UI/UX Designer &amp; Frontend Developer</p>
+        </div>
+        <ul class="footer-links">
+          <li><a href="https://github.com/d1fy5" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+          <li><a href="https://www.linkedin.com/in/muhammad-daffa-alfarisi-499421376" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+          <li><a href="mailto:daffalfari1108@gmail.com">Email</a></li>
+          <li><a href="https://wa.me/6282136729075" target="_blank" rel="noopener noreferrer">WhatsApp</a></li>
+        </ul>
+      </div>
+      <p class="footer-copy">&copy; 2026 Muhammad Daffa Alfarisi. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    document.querySelectorAll(".reveal").forEach((el) => {
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("is-visible");
+              observer.unobserve(entry.target);
+            }
+          });
+        },
+        { threshold: 0.12, rootMargin: "0px 0px -40px 0px" }
+      );
+      observer.observe(el);
+    });
+  </script>
+</body>
+</html>
