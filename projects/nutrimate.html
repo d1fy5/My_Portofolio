@@ -51,7 +51,7 @@
       <div class="pd-container">
         <div class="pd-featured reveal">
           <div class="pd-video-wrapper pd-video-wrapper--mockup">
-            <video class="pd-video" autoplay muted loop playsinline controls preload="metadata" poster="../assets/nutrimate/home-dashboard.jpg" aria-label="NutriMate project mockup">
+            <video class="pd-video" muted playsinline loop preload="metadata" poster="../assets/nutrimate-cover.jpg" aria-label="NutriMate project mockup">
               <source src="../assets/nutrimate/nutrimate-mockup.mp4" type="video/mp4">
             </video>
           </div>
@@ -166,6 +166,41 @@
         { threshold: 0.12, rootMargin: "0px 0px -40px 0px" }
       );
       observer.observe(el);
+    });
+
+    document.querySelectorAll(".pd-video").forEach((video) => {
+      const wrapper = video.closest(".pd-video-wrapper");
+      if (!wrapper) return;
+
+      const play = () => {
+        video.currentTime = 0;
+        video.play().catch(() => {});
+      };
+      const stop = () => {
+        video.pause();
+        video.currentTime = 0;
+      };
+
+      wrapper.addEventListener("mouseenter", () => {
+        if (video.paused) play();
+      });
+
+      let clickGuardActive = false;
+      video.addEventListener("click", () => {
+        clickGuardActive = true;
+        setTimeout(() => {
+          clickGuardActive = false;
+        }, 350);
+        if (video.paused) {
+          video.play().catch(() => {});
+        } else {
+          stop();
+        }
+      });
+      wrapper.addEventListener("mouseleave", () => {
+        if (clickGuardActive) return;
+        if (!video.paused) stop();
+      });
     });
   </script>
 </body>
