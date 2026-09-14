@@ -419,6 +419,190 @@
   object-position: top center;
 }
 
+/* Case Study — Problem / Solution / Goals / Colors / Typography */
+
+.pd-case-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+}
+
+.pd-case-card {
+  background: var(--bg-elev);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: clamp(1.5rem, 3vw, 2.25rem);
+  box-shadow: var(--shadow-lift);
+}
+
+.pd-case-kicker {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--case-accent, var(--accent));
+}
+
+.pd-case-title {
+  margin-top: 0.85rem;
+  font-size: 1.15rem;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}
+
+.pd-case-text {
+  margin-top: 0.65rem;
+  font-size: 0.95rem;
+  line-height: 1.7;
+  color: var(--text-soft);
+}
+
+/* Goals */
+
+.pd-goals-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.25rem;
+}
+
+.pd-goal-card {
+  background: var(--bg-elev);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.5rem;
+  transition: border-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.pd-goal-card:hover {
+  border-color: var(--border-strong);
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lift);
+}
+
+.pd-goal-index {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: 1.4rem;
+  color: var(--case-accent, var(--accent));
+}
+
+.pd-goal-title {
+  margin-top: 0.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.pd-goal-desc {
+  margin-top: 0.4rem;
+  font-size: 0.85rem;
+  line-height: 1.6;
+  color: var(--text-muted);
+}
+
+/* Colors */
+
+.pd-colors-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.pd-color-chip {
+  flex: 1 1 150px;
+  min-width: 150px;
+  background: var(--bg-elev);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow-lift);
+}
+
+.pd-color-swatch {
+  height: 90px;
+  background: var(--c, #E2E8F0);
+}
+
+.pd-color-info {
+  padding: 0.9rem 1rem;
+}
+
+.pd-color-name {
+  font-size: 0.86rem;
+  font-weight: 600;
+}
+
+.pd-color-hex {
+  margin-top: 0.2rem;
+  font-family: var(--font-mono);
+  font-size: 0.74rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+/* Typography */
+
+.pd-type-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+}
+
+.pd-type-card {
+  background: var(--bg-elev);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: clamp(1.5rem, 3vw, 2.25rem);
+  box-shadow: var(--shadow-lift);
+}
+
+.pd-type-sample--display {
+  font-size: clamp(2rem, 4.5vw, 3rem);
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+}
+
+.pd-type-sample--serif {
+  font-family: var(--font-serif);
+}
+
+.pd-type-sample--body {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--text-soft);
+}
+
+.pd-type-meta {
+  margin-top: 1.5rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid var(--border);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.75rem;
+}
+
+.pd-type-meta > div {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.pd-type-label {
+  font-family: var(--font-mono);
+  font-size: 0.66rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+.pd-type-value {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--text);
+}
+
 /* Prototype CTA */
 
 .pd-prototype-cta {
@@ -511,6 +695,16 @@
 @media (max-width: 640px) {
   .pd-screens-grid {
     grid-template-columns: 1fr;
+  }
+
+  .pd-case-grid,
+  .pd-type-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .pd-color-chip {
+    flex: 1 1 100%;
+    min-width: 100%;
   }
 
   .pd-meta {
